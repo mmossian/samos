@@ -53,9 +53,9 @@ class Validate extends CI_Model
 		{
 			$this->user = $user;
 			$pwd = $data['user_pwd'];
-			if($this->password->pwdVerify($pwd, $user->user_pwd, $user->id_user))
+			if($user->user_active == 1)
 			{
-				if($user->user_active == 1)
+				if($this->password->pwdVerify($pwd, $user->user_pwd, $user->id_user))
 				{
 					$dir = FCPATH."assets/users/{$user->id_user}";
 					// Crea la estructura de directorios del usuario si no existe
@@ -86,11 +86,11 @@ class Validate extends CI_Model
 					$_SESSION[$this->init->sessionNames['user']]['ip_address'] = $this->input->ip_address();
 					return;
 				}
-				$this->status = 'user-no-active';
+				$this->status = 'error';
 			}
 			else
 			{
-				$this->status = 'error';
+				$this->status = 'user-no-active';
 			}
 		}
 		else
