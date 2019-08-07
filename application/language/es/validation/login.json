@@ -1,0 +1,24 @@
+{
+	"user_email": {
+		"identifier": "user_email",
+		"rules": [
+			{
+				"type": "email",
+				"prompt": "Ingresa un correo v&aacute;lido",
+			}
+		]
+	},
+	"user_pwd": {
+		"identifier": "user_pwd",
+		"rules": [
+			{
+				"type": "minLength[6]",
+				"prompt": "El campo <b>Contrase&ntilde;a</b> debe tener al menos 6 caracteres",
+			},
+			{
+				"type": "maxLength[20]",
+				"prompt": "El campo <b>Contrase&ntilde;a</b> debe tener a lo sumo 20 caracteres",
+			}
+		]
+	}
+}

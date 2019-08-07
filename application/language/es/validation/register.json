@@ -1,0 +1,55 @@
+{
+	"country": {
+		"identifier": "country",
+		"rules": [
+			{
+				"type": "empty",
+				"prompt": "Selecciona tu pa&iacute;s"
+			}
+		]
+	},
+	"email": {
+		"identifier": "email",
+		"rules": [
+			{
+				"type": "email",
+				"prompt": "Ingresa un correo v&aacute;lido"
+			}
+		]
+	},
+	"first_name": {
+		"identifier": "first_name",
+		"rules": [
+			{
+				"type": "empty",
+				"prompt": "Ingresa tu nombre"
+			},
+			{
+				"type": "maxLength[20]",
+				"prompt": "El nombre no puede exceder los 20 caracteres"
+			}
+		]
+	},
+	"last_name": {
+		"identifier": "last_name",
+		"rules": [
+			{
+				"type": "empty",
+				"prompt": "Ingresa tu apellido"
+			},
+			{
+				"type": "maxLength[20]",
+				"prompt": "El apellido no puede exceder los 20 caracteres"
+			}
+		]
+	},
+	"g-recaptcha-response": {
+		"identifier": "g-recaptcha-response",
+		"rules": [
+			{
+				"type": "empty",
+				"prompt": "Debes chequear la opci&oacute;n no soy un robot"
+			}
+		]
+	}
+}
