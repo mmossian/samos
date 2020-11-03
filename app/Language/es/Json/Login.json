@@ -1,0 +1,28 @@
+{
+	"email": {
+		"identifier": "email",
+		"rules": [
+			{
+				"type": "email",
+				"prompt": "Ingresa un corro electrónico válido."
+			}
+		]
+	},
+	"password": {
+		"identifier": "password",
+		"rules": [
+			{
+				"type": "empty",
+				"prompt": "Campo Requerido"
+			},
+			{
+				"type" : "minLength[8]",
+				"prompt" : "Mínimo 8 caracteres"
+			},
+			{
+				"type" : "maxLength[20]",
+				"prompt" : "Máximo 20 caracteres"
+			}
+		]
+	}
+}

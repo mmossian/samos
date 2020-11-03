@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			{{ CsrfMeta|raw }}
+			<title>{{ AppName }} | {{ Content.pageTitle }}</title>
+
+            <!-- FAVICON -->
+            <link rel="shortcut icon" href="{{ AssetsUrl }}/images/favicon.ico" type="image/x-icon">
+            <link rel="icon" href="{{ AssetsUrl }}/images/defaults/favicon.ico" type="image/x-icon">
+            <link type="text/css" rel="stylesheet" href="{{ AssetsUrl }}/fomantic/ui/dist/semantic.min.css">
+            <link type="text/css" rel="stylesheet" href="{{ AssetsUrl }}/css/app.css">
+			{% block css %}{% endblock %}
+
+			{% block apis %}{% endblock %}
+	</head>
+	<body>
+		{# BARRA DE NAVEGACION #}
+		{% block nav %}{% endblock %}
+
+		{# CONTENIDO DE LA PAGINA #}
+		{% block content %}{% endblock %}
+
+		{# MENSAJES TOAST #}
+		{% if ToastMessage is defined %}
+			<input type="hidden" id="toast-message" value="{{ ToastMessage|json_encode }}">
+		{% endif %}
+
+		<script src="{{ AssetsUrl }}/js/jquery.min.js"></script>
+		<script src="{{ AssetsUrl }}/fomantic/ui/dist/semantic.min.js"></script>
+		{% block js %}{% endblock %}
+		<script src="{{ AssetsUrl }}/js/init.js"></script>
+
+		<script>
+			var DomRootEl = $(document.body),
+				BaseUrl = "{{ BaseUrl }}",
+				CurUrl = "{{ CurUrl }}",
+				Processing = "{{ Processing ?? null }}";
+
+			$(function(){
+				$(document.body).Init("{{ IdPage }}")
+			})
+		</script>
+	</body>
+</html>

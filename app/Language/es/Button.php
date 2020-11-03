@@ -1,0 +1,38 @@
+<?php
+
+return [
+	'buttons' => [
+		'access' => 'Ingresar',
+		'accept' => 'Aceptar',
+		'add' => 'Agregar',
+		'all' => 'Todos',
+		'block' => 'Bloquear',
+		'cancel' => 'Cancelar',
+		'copy' => 'Copiar',
+		'createDraw' => 'Crear Sorteo',
+		'delete' => 'Eliminar',
+		'forgot_my_password' => 'Olvidé mi contraseña',
+		'inRisk' => 'En riesgo',
+		'next' => 'Siguiente',
+		'new' => 'Nuevo',
+		'pending' => 'Pendiente',
+		'previous' => 'Anterior',
+		'publishMarker' => 'Publicar registro',
+		'random' => 'Aleatorio',
+		'resendLink' => 'Reenviar Link',
+		'restoreDefPermission' => 'Restaurar Permisos por Defecto',
+		'restoreAddress' => 'Restaurar Dirección',
+		'saleOfMonth' => 'Vendedor del mes',
+		'save' => 'Guardar',
+		'saveChanges' => 'Guardar Cambios',
+		'selectAll' => 'Seleccionar todos',
+		'selectNone' => 'Deseleccionar todos',
+		'signup' => 'Registrarse',
+		'show' => 'Mostrar',
+		'showHide' => 'Mostrar/Ocultar',
+		'sorteos' => 'Sorteos',
+		'update' => 'Actualizar',
+		'viewAll' => 'Ver todos',
+		'viewMore' => 'Ver más'
+	],
+];

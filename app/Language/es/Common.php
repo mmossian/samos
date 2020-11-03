@@ -1,0 +1,40 @@
+<?php
+
+return [
+	'text' => [
+		'active' => 'Habilitado',
+		'aprove' => 'Aprobar',
+		'aprovation' => 'Aprobación',
+		'aproved' => 'Aprobada',
+		'blocked' => 'Bloqueado',
+		'company' => 'Empresa',
+		'draw' => 'Sorteo mensual',
+		'saleman' => 'Vendedor del mes',
+		'items' => 'Items',
+		'month' => 'Mes',
+		'no' => 'No',
+		'notAproved' => 'Pendiente',
+		'hi' => 'Hola',
+		'processing' => 'Procesando solicitud. Aguarde',
+		'product' => 'Producto',
+		'refuse' => 'Rechazar',
+		'reject' => 'Rechazo',
+		'rejected' => 'Rechazada',
+		'user' => 'Usuario',
+		'yes' => 'Si'
+	],
+	/*'company_id' => 'Empresa',
+	'confirm_password' => 'Confirmar contraseña',
+	'cur_password' => 'Contraseña actual',
+	'email' => 'Email',
+	'firstname' => 'Nombre',
+	'lastname' => 'Apellido',
+	'user_group' => 'Grupo',
+	'user_email' => 'Correo Electrónico',
+	'user_name' => 'Nombre Completo',
+	'user_password' => 'Contraseña',
+	'password_confirm' => 'Confirmación Contraseña',
+	'phone' => 'Celular',
+	'password' => 'Contraseña',
+	'terms' => 'Términos y Condiciones',*/
+];

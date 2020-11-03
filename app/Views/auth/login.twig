@@ -1,0 +1,59 @@
+{% extends 'index.twig' %}
+
+{% block nav %}
+    <div class="ui container">
+        {% include "navs/public.twig" %}
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="ui container basic center aligned segment">
+        <span class="ui big grey text">{{ Content.title }}</span>
+        <div class="ui divider"></div>
+    </div>
+    <div class="ui container segment">
+    	<div class="ui relaxed grid">
+    		<div class="ui ten wide column">
+		        <form class="ui form" action="{{ BaseUrl }}/auth/access" method="post">
+		        	{{CsrfField|raw}}
+		        	<input type="hidden" id="rules" value='{{ Rules }}'>
+		        	<div class="field required">
+		        		<label>{{ Content.email }}</label>
+		        		<div class="ui left icon input">
+		        			<input type="text" class="border-bottom" name="email" autocomplete="off" autofocus="" value="{{ Old.email }}">
+		        			<i class="envelope icon"></i>
+		        		</div>
+		        	</div>
+		        	<div class="field required">
+		        		<label>{{ Content.password }}</label>
+		        		<div class="ui left icon input">
+		        			<input type="password" class="border-bottom" name="password" maxlength="20">
+		        			<i class="lock icon"></i>
+		        		</div>
+		        	</div>
+		        	<div class="ui divider hidden"></div>
+					<div class="ui fluid buttons">
+						<button type="submit" class="ui teal button">
+							{{ Buttons.access }}
+						</button>
+						<div class="or" data-text="o"></div>
+						<button type="button" class="ui button">
+							{{ Buttons.forgot_my_password }}
+						</button>
+					</div>
+		        </form>
+		    </div>
+		    <div class="ui six wide column center aligned">
+		    	<span class="ui large text">{{ Content.loginWithSocialNets }}</span>
+		    	<div class="ui divider hidden"></div>
+		    	<a class="ui big google plus fluid button">
+		    		<i class="icon google"></i> Google
+		    	</a>
+		    </div>
+		</div>
+    </div>
+{% endblock %}
+
+{% block js %}
+	<script src="{{ AssetsUrl }}/js/auth.js"></script>
+{% endblock %}

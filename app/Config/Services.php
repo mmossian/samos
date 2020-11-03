@@ -18,13 +18,36 @@ use CodeIgniter\Config\Services as CoreServices;
 class Services extends CoreServices
 {
 
-	//    public static function example($getShared = true)
-	//    {
-	//        if ($getShared)
-	//        {
-	//            return static::getSharedInstance('example');
-	//        }
-	//
-	//        return new \CodeIgniter\Example();
-	//    }
+	public static function renderView(string $view, array $params = [], $getShared = false)
+	{
+		$loader = new \Twig\Loader\FilesystemLoader(APPPATH.'Views');
+		$twig = new \Twig\Environment($loader, [
+		    'cache' => WRITEPATH.'cache',
+		    'debug' => true
+		]);
+		$twig->addExtension(new \Twig\Extra\Intl\IntlExtension());
+		return $twig->render($view, $params);
+	}
+
+	public static function asset($getShared = false)
+	{
+		return base_url().'/assets';
+	}
+
+	public static function logo($getShared = false)
+	{
+		return base_url().'/assets/images/'.APP_LOGO;
+	}
+
+	public static function setMenu($type, $getShared = false)
+	{
+		return (array) lang('Menu.'.$type);
+	}
+
+	public static function setJsonRules($file, $getShared = false)
+	{
+		$rules = file_get_contents(APPPATH.'Language/'.service('request')->getLocale().'/Json/'.$file);
+		return $rules;
+	}
+
 }

@@ -13,7 +13,9 @@
 		"fomantic/ui": "^2.8",
 		"components/jquery": "^3.5",
 		"components/jqueryui": "^1.12",
-		"wenzhixin/bootstrap-table": "^1.18"
+		"wenzhixin/bootstrap-table": "^1.18",
+		"codeigniter4/translations": "^4.0",
+		"hybridauth/hybridauth": "^3.6"
 	},
 	"require-dev": {
 		"fzaninotto/faker": "^1.9@dev",

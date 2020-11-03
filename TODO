@@ -1,0 +1,8 @@
+ü, é, á, í, ó, ú, ñ, Ñ ¿ ?
+# VALIDACION DE NOMBRE CON ENIES Y TILDES
+[
+	'field' => 'name',
+    'label' => 'Nombre',
+    'rules' => 'required|regex_match[/^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+(\s*[a-zA-ZñÑáéíóúÁÉÍÓÚ])+$/])|min_length[2]|max_length[50]'
+]
+######################################################

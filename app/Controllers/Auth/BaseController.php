@@ -1,18 +1,18 @@
 <?php
-namespace App\Controllers;
+namespace App\Controllers\Auth;
 
 /**
- * Class BaseController
- *
- * BaseController provides a convenient place for loading components
- * and performing functions that are needed by all your controllers.
- * Extend this class in any new controllers:
- *     class Home extends BaseController
- *
- * For security be sure to declare any new methods as protected or private.
- *
- * @package CodeIgniter
- */
+* Class BaseController
+*
+* BaseController provides a convenient place for loading components
+* and performing functions that are needed by all your controllers.
+* Extend this class in any new controllers:
+*     class Home extends BaseController
+*
+* For security be sure to declare any new methods as protected or private.
+*
+* @package CodeIgniter
+*/
 
 use CodeIgniter\Controller;
 
@@ -20,18 +20,18 @@ class BaseController extends Controller
 {
 
 	/**
-	 * An array of helpers to be loaded automatically upon
-	 * class instantiation. These helpers will be available
-	 * to all other controllers that extend BaseController.
-	 *
-	 * @var array
-	 */
+	* An array of helpers to be loaded automatically upon
+	* class instantiation. These helpers will be available
+	* to all other controllers that extend BaseController.
+	*
+	* @var array
+	*/
 	protected $helpers = [];
 	protected $data = [];
 
 	/**
-	 * Constructor.
-	 */
+	* Constructor.
+	*/
 	public function initController(\CodeIgniter\HTTP\RequestInterface $request, \CodeIgniter\HTTP\ResponseInterface $response, \Psr\Log\LoggerInterface $logger)
 	{
 		// Do Not Edit This Line
@@ -42,7 +42,6 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		$this->session = \Config\Services::session();
-
 		$this->data['AppName'] = APP_NAME;
 		$this->data['BaseUrl'] = base_url();
 		$this->data['CurUrl'] = current_url();
@@ -51,13 +50,7 @@ class BaseController extends Controller
 		$this->data['AppLogo'] = \Config\Services::logo();
 		$this->data['CsrfMeta'] = csrf_meta();
 		$this->data['CsrfField'] = csrf_field();
-		$this->data['Csrf'] = [
-			'token' => csrf_token(),
-			'hash' => csrf_hash()
-		];
 		$this->data['Buttons'] = (array) lang('Button.buttons');
-		$this->data['Text'] = (array) lang('Common.text');
-		$this->data['Processing'] = lang('Common.text.processing');
 
 		if($this->session->has(TOAST_MESSAGE))
 		{

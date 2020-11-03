@@ -75,3 +75,35 @@ defined('EXIT_USER_INPUT')     || define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       || define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      || define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      || define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+/**
+ *
+ *   Application constants
+ *
+ */
+// Application data
+defined('APP_NAME')      || define('APP_NAME', 'Samos');
+defined('APP_LOGO')      || define('APP_LOGO', 'logo.png');
+defined('APP_THROTTLE_LIMITER') || define('APP_THROTTLE_LIMITER', 30);
+
+// Default home routes
+defined('PUBLIC_HOME')      || define('PUBLIC_HOME', 'home');
+defined('USER_HOME')      || define('USER_HOME', 'user-home');
+defined('COMPANY_HOME')      || define('COMPANY_HOME', 'company-home');
+defined('ADMIN_HOME')      || define('ADMIN_HOME', 'admin-home');
+defined('FIRST_HOME')      || define('FIRST_HOME', 'first-home');
+
+
+// Users constants
+defined('APP_ADMIN')      || define('APP_ADMIN', 'admin');
+defined('APP_USER')      || define('APP_USER', 'user');
+defined('APP_COMPANY')      || define('APP_COMPANY', 'assoc');
+
+// Session constants
+defined('USER_SESSION_NAME')      || define('USER_SESSION_NAME', 'APP-USER-SESSION');
+defined('TOAST_MESSAGE')      || define('TOAST_MESSAGE', 'TOAST-MESSAGE');
+defined('INLINE_MESSAGE')      || define('INLINE_MESSAGE', 'INLINE-MESSAGE');
+defined('REQUEST_DATA')      || define('REQUEST_DATA', 'OLD-DATA');
+
+// Images
+defined('APP_NOIMAGE')      || define('APP_NOIMAGE', 'noimage.png');

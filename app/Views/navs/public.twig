@@ -1,0 +1,13 @@
+<div class="ui borderless teal large menu">
+	<div class="header item">
+		<img src="{{ AppLogo }}" class="ui small image" alt="{{ AppName }}">
+	</div>
+	<div class="right menu">
+		{% for k, item in MenuItems %}
+			{% set active = k == IdMenu ? 'active' : '' %}
+			<a href="{{ BaseUrl }}{{ item.url }}" class="item {{ active }}">
+				<i class="{{ item.icon }}"></i> {{ item.name }}
+			</a>
+		{% endfor %}
+	</div>
+</div>

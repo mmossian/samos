@@ -33,4 +33,9 @@ class Validation
 	//--------------------------------------------------------------------
 	// Rules
 	//--------------------------------------------------------------------
+
+	public $login = [
+		'email' => 'required|valid_email',
+		'password' => 'required|min_length[8]|max_length[20]',
+	];
 }
